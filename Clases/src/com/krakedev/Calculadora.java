@@ -7,7 +7,7 @@ public class Calculadora {
 		return resultado;
 	}
 
-	public double restar(double valor1, double valor2) {
+	public double restar(int valor1, int valor2) {
 		double resultado;
 		resultado = valor1 - valor2;
 		return resultado;
