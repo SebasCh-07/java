@@ -4,10 +4,17 @@ public class TestCuadrado {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Cuadradop ladoC1 = new Cuadradop();
-		Cuadradop ladoC2 = new Cuadradop();
-		Cuadradop ladoC3 = new Cuadradop();
-
+		Cuadradop ladoC1 = new Cuadradop(9);
+		Cuadradop ladoC2 = new Cuadradop(8);
+		Cuadradop ladoC3 = new Cuadradop(7);
+		
+		System.out.println("----------------------------------------------------------------------------------------");
+		System.out.println("El Area de C1: "+ladoC1.calcularArea()+" Perimetro de C1: "+ladoC1.calcularPerimetro());
+		System.out.println("El Area de C1: "+ladoC2.calcularArea()+" Perimetro de C1: "+ladoC2.calcularPerimetro());
+		System.out.println("El Area de C1: "+ladoC3.calcularArea()+" Perimetro de C1: "+ladoC3.calcularPerimetro());
+		System.out.println("----------------------------------------------------------------------------------------");
+		
+		
 		double areaC1;
 		double periC1;
 

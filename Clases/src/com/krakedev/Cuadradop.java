@@ -3,6 +3,10 @@ package com.krakedev;
 public class Cuadradop {
 	private int lado;
 	
+	public Cuadradop(int lado) {
+		this.lado = lado;
+	}
+	
 	public int getLado() {
 		return lado;
 	}
