@@ -14,5 +14,4 @@ public class TestEstudiante {
 		est2.calificar(9);
 		est3.calificar(8.5);
 	}
-
 }
