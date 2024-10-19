@@ -7,11 +7,9 @@ create table usuario (
 
 	constraint usuario_pk primary key(cedula)
 )
-
 alter table cuentas
 add constraint cuentas_cedula_propietario_fk foreign key(cedula_propietario)
 references usuario(cedula)
-
 insert into cuentas(numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values(54578,12345,'22/08/2022',500)
 insert into cuentas(numero_cuenta,cedula_propietario,fecha_creacion,saldo)
@@ -33,8 +31,6 @@ values(71346,12313,'16/04/2023',1000)
 insert into cuentas(numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values(62458,12314,'20/05/2023',600)
 select * from cuentas
-
-
 insert into usuario(cedula,nombre,apellido)
 values(12345,'Marco','Polo')
 insert into usuario(cedula,nombre,apellido)
@@ -55,5 +51,16 @@ insert into usuario(cedula,nombre,apellido)
 values(12313,'Marco','Baquero')
 insert into usuario(cedula,nombre,apellido)
 values(12314,'Ramon','Flores')
+select * from usuario
+--------------------------------------------------------------------------------------------------------------
+select cu.numero_cuenta, us.nombre
+from usuario us, cuentas cu
+where cu.saldo >= '100'::money and cu.saldo <= '1000'::money and cu.cedula_propietario = us.cedula
+
+select cu.numero_cuenta,cu.fecha_creacion,cu.saldo,cu.cedula_propietario from usuario us, cuentas cu 
+where cu.fecha_creacion between '21/09/2022' and '21/09/2023'
+and cu.cedula_propietario = us.cedula
+
+select * from cuentas
 select * from usuario
 
