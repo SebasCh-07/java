@@ -49,7 +49,7 @@ insert into transacciones (codigo,numero_cuenta,monto,tipo,fecha,hora)
 values(10,'22004',100,'D','19/09/2024','17:24')
 ----------------------------------------------------------------------------------
 select tra.*, ba.codigo_banco, ba.detalle from transacciones tra, banco ba 
-where tipo = 'C' and numero_cuenta between '22001' and '22004'
+where tipo = 'C' and numero_cuenta between '22001' and '22004' and tra.codigo = ba.codigo_transaccion
 
 select * from transacciones
 where codigo = (select codigo_transaccion from banco where codigo_transaccion = 1)
